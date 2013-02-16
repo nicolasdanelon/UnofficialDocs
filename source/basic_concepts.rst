@@ -19,7 +19,7 @@ way Sublime Text maps keys to commands, **some key bindings won't match your
 locale's keyboard layout**.
 
 
-With Great Power Comes Lots of Questions
+With Great Power Come Lots of Questions
 ========================================
 
 Sublime Text is a very extensible and customizable editor. It does many things
@@ -124,7 +124,7 @@ many settings files: there simply must be a place to specify all your preference
 
 Configuration files in Sublime Text let you change the editor's behavior, add
 macros, snippets or create new features --where *feature* means ‘anything you can
-think of'. Ok, maybe not *anything*, but Sublime Text definitely hands you over
+think of'. OK, maybe not *anything*, but Sublime Text definitely hands you over
 a good deal of control.
 
 These settings files are simply text files following a special structure or
@@ -141,7 +141,7 @@ Textmate Compatibility
 ======================
 
 This information is mainly useful for Textmate users who are now using Sublime
-Text. Textmate was an editor for the Mac.
+Text. Textmate is an editor for the Mac.
 
 Sublime Text 2 is fairly compatible with Textmate bundles with the notable
 exception of commands. Additionally, Sublime Text requires all syntax
@@ -155,7 +155,8 @@ Vi Emulation
 ============
 
 This information is mainly useful for dinosaurs and people who like to drop
-the term RSI in conversations. Vi is an ancient modal editor that lets the
+the term [RSI](http://en.wikipedia.org/wiki/Repetitive_strain_injury)
+in conversations. Vi is an ancient modal editor that lets the
 user perform all operations from the keyboard. Vim, a modern version of vi,
 is still in widespread use.
 
@@ -169,8 +170,8 @@ documentation.
 Emacs
 =====
 
-This information is hardly useful for anyone. Emacs is... Well, nobody really
-knows what emacs is, although some people edit text with it.
+This information is hardly useful for anyone. Emacs is... well, nobody really
+knows precisely what emacs is, though some people edit text with it.
 
 If you are an emacs user, you're probably not reading this.
 

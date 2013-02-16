@@ -7,7 +7,7 @@ organizational purposes, but Sublime Text follows a few rules when dealing with
 them. More on this later.
 
 Here's a list of typical resources living inside packages:
-	
+
     - build systems (``.sublime-build``)
     - key maps (``.sublime-keymap``)
     - macros (``.sublime-macro``)
@@ -65,7 +65,7 @@ containing Sublime Text resources under ``Packages``. The only thing that
 changes from one system to another is how you copy these files.
 
 .. sidebar:: Installing Packages vs Installed Packages
-	
+
    Note that installing a package doesn't actually make that package an
    installed package. *Installed packages* are ``.sublime-package`` files
    residing in the ``Installed Packages`` directory. In this guide, we use

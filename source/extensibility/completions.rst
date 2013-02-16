@@ -17,7 +17,7 @@ Note that completions in the broader sense of *words that Sublime Text will
 look up and insert for you* are not limited to completions files, because other
 sources contribute to the list of words to be completed, namely:
 
-	 * Snippets 
+	 * Snippets
 	 * API-injected completions
 	 * Buffer contents
 
@@ -43,7 +43,7 @@ Here's an excerpt from the HTML completions:
 
 	{
 		"scope": "text.html - source - meta.tag, punctuation.definition.tag.begin",
-	
+
 		"completions":
 		[
 			{ "trigger": "a", "contents": "<a href=\"$1\">$0</a>" },
@@ -66,13 +66,13 @@ with a list like so:
 
 	{
 		"scope": "text.html - source - meta.tag, punctuation.definition.tag.begin",
-	
+
 		"completions":
 		[
 			{ "trigger": "a", "contents": "<a href=\"$1\">$0</a>" },
 			{ "trigger": "abbr", "contents": "<abbr>$0</abbr>" },
 			{ "trigger": "acronym", "contents": "<acronym>$0</acronym>" },
-			
+
 			"ninja",
 			"robot",
 			"pizza"
@@ -115,7 +115,7 @@ There are two methods to use completions, and although the priority given to
 completions when screening them is always the same, there is a difference in
 the result that will be explained below.
 
-Completions can be inserted in two ways: 
+Completions can be inserted in two ways:
 
 	* through the completions list (:kbd:`Ctrl+spacebar`);
 	* by pressing :kbd:`Tab`.

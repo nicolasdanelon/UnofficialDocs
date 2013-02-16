@@ -23,7 +23,7 @@ div.sphinxsidebar {
 
 div.sphinxsidebar p.searchtip {
 	display: none;
-} 
+}
 
 div.sphinxsidebarwrapper > ul, div.sphinxsidebarwrapper > h4 {
 	display: none;

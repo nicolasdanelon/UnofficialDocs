@@ -5,7 +5,7 @@ Editing
 Overview
 ========
 
-Sublime Text is full to the brim with editing features. This topic just
+Sublime Text is brim-full of editing features. This topic just
 scratches the surface of what's possible.
 
 
@@ -56,4 +56,4 @@ And much, much more...
 
 The **Edit**, **Selection**, **Find** and **Goto** menus are good places to
 look for handy editing tools. You might end up using just a few of them,
-but the rest will still be there when you need them.
+but still the rest will be there for when you need them.

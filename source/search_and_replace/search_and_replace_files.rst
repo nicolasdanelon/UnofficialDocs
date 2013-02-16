@@ -1,5 +1,5 @@
 ===================================
-Search and Replace - Multiple Files 
+Search and Replace - Multiple Files
 ===================================
 
 .. _snr-search-files:

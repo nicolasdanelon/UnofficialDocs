@@ -15,7 +15,7 @@ Toggle Regular Expressions	``Alt + R``
 Toggle Case Sensitivity   	``Alt + C``
 Toggle Exact Match       	``Alt + W``
 Find Next					``Enter``
-Find Previous				``Shift + Enter`` 
+Find Previous				``Shift + Enter``
 Find All					``Alt + Enter``
 ==========================	===========
 

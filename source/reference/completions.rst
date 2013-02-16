@@ -23,7 +23,7 @@ Here's an excerpt from the html completions::
 
 	{
 		"scope": "text.html - source - meta.tag, punctuation.definition.tag.begin",
-	
+
 		"completions":
 		[
 			{ "trigger": "a", "contents": "<a href=\"$1\">$0</a>" },

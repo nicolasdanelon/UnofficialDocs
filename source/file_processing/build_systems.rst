@@ -34,17 +34,17 @@ Here's an example of a build system:
         python -u /path/to/current/file.ext
 
 ``file_regex``
-    A Perl-style regular expression to capture error information out of the
-    external program's output. This information is then used to help you
+    A Perl-style regular expression to capture error information from an
+    external program's output. This information is used to help you
     navigate through error instances with :kbd:`F4`.
 
 ``selector``
     If the **Tools | Build System | Automatic** option is set, Sublime Text
-    will automatically find the corresponding build system for the active file
-    by matching ``selector`` to the file's scope.
+    will find the corresponding build system for the active file
+    by automatically matching ``selector`` to the file's scope.
 
-In addition to options, you can also use some variables in build systems, like
-we have done above with ``$file``, which expands to the the active buffer's
+In addition to options, also you can use some variables in build systems, as
+we have done above with ``$file``, which expands to the active buffer's
 file name.
 
 

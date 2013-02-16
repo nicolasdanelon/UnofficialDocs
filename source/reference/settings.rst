@@ -26,7 +26,7 @@ Global Settings
 ``mouse_wheel_switches_tabs``
    If ``true``, scrolling the mouse wheel will cause tabs to switch if the
    cursor is in the tab area.
-``open_files_in_new_window``   
+``open_files_in_new_window``
    OS X only. When filters are opened from Finder, or by dragging onto the
    dock icon, this controls if a new window is created or not.
 
@@ -138,7 +138,7 @@ Automatic Behavior
    useful (e. g.: word wrapping). In such other contexts, the text might be
    tokenized based on other criteria (e. g. the syntax definition rules).
 ``ensure_newline_at_eof_on_save``
-   Always adds a new line at the end of the file if not present when saving.   
+   Always adds a new line at the end of the file if not present when saving.
 
 System and Miscellaneous Settings
 *********************************
