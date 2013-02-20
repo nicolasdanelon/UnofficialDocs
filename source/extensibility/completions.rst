@@ -9,21 +9,21 @@ Completions
    `Sublime Text Documentation <http://www.sublimetext.com/docs/2/tab_completion.html>`_
    	Official documentation on this topic.
 
-Completions provide functionality in the spirit of IDEs to suggest terms and
+In the spirit of IDEs, completions provide functionality to suggest terms and
 insert snippets. Completions work through the completions list or, optionally,
 by pressing :kbd:`Tab`.
 
-Note that completions in the broader sense of *words that Sublime Text will
-look up and insert for you* are not limited to completions files, because other
+Note that, in the broader sense of *words that Sublime Text will look up and
+insert for you*, completions aren't limited to completions files, because other
 sources contribute to the list of words to be completed, namely:
 
 	 * Snippets
 	 * API-injected completions
 	 * Buffer contents
 
-However, ``.sublime-completions`` files are the most explicit way Sublime Text
-provides you to feed it completions. This topic deals with the creation of
-``.sublime-completions`` files as well as with the interaction between all
+However, the most explicit way Sublime Text provides you to feed it completions
+is by ``.sublime-completions`` files. This topic deals with the creation of a
+``.sublime-completions`` file as well as with the interactions among all
 sources for completions.
 
 
@@ -37,7 +37,7 @@ Entries in completions files can contain either snippets or plain strings.
 Example
 *******
 
-Here's an excerpt from the HTML completions:
+Here's an excerpt from Sublime Text's HTML completions:
 
 .. code-block:: js
 
@@ -57,10 +57,10 @@ Here's an excerpt from the HTML completions:
 	list of completions. See :ref:`scopes-and-scope-selectors` for more
 	information.
 
-In the example above, we've used trigger-based completions only, but
+In the example above, we've only used trigger-based completions, but
 completions files support simple completions too. Simple completions are just
-plain strings. Expanding our example with a few simple completions, we'd end up
-with a list like so:
+plain strings. Expanding our example with a few simple completions results
+in a list like this:
 
 .. code-block:: js
 
@@ -83,7 +83,7 @@ with a list like so:
 Sources for Completions
 =======================
 
-Completions not only originate in ``.sublime-completions`` files. This is the
+Completions not only originate in ``.sublime-completions`` files. Here is the
 exhaustive list of sources for completions:
 
 	* Snippets
@@ -99,58 +99,60 @@ This is the order in which completions are prioritized:
 	* Snippets
 	* API-injected completions
 	* ``.sublime-completions`` files
-	* Words in buffer
+	* Words in the buffer
 
-Snippets will always win if the current prefix matches their tab trigger
-exactly. For the rest of the completions sources, a fuzzy match is performed.
-Also, snippets will always lose against a fuzzy match. Note that this is only
-relevant if the completion is going to be inserted automatically. When the
-completions list is shown, snippets will be listed along the other items, even
-if the prefix only partially matches the snippets' tab triggers.
+Always, snippets will win if the current prefix matches their tab trigger
+exactly. For the rest of the completion sources, a fuzzy match is performed.
+And, snippets always lose, with fuzzy matches.
+
+But this is relevant only when the completion is inserted automatically. When
+a list of completions is shown, snippets still will be listed alongside the
+other items, even if the prefix only partially matches the snippets' tab
+triggers.
 
 How to Use Completions
 ======================
 
-There are two methods to use completions, and although the priority given to
-completions when screening them is always the same, there is a difference in
-the result that will be explained below.
+There are two methods for using completions. Although, when screening them, the
+priority given to completions always stays the same, the two methods produce
+different results, as explained next.
 
 Completions can be inserted in two ways:
 
-	* through the completions list (:kbd:`Ctrl+spacebar`);
-	* by pressing :kbd:`Tab`.
+	* Through the completions list (:kbd:`Ctrl+spacebar`); or
+	* By pressing :kbd:`Tab`.
 
 
 The Completions List
 ********************
 
-The completions list (:kbd:`Ctrl+spacebar`) may work in two ways: by bringing
+The completions list (:kbd:`Ctrl+spacebar`) does its work in two ways: by bringing
 up a list of suggested words to be completed, or by inserting the best match
 directly.
 
 If the choice of best completion is ambiguous, an interactive list will be
-presented to the user, who will have to select an item himself. Unlike other
-items, snippets in this list are displayed in this format:
+presented to the user, who then will have to select an item himself. Unlike other
+items, snippets in this list are displayed in the format:
 ``<tab_trigger> : <name>``, where ``<tab_trigger>`` and ``<name>`` are
-variable.
+variables.
 
-The completion with :kbd:`Ctrl+spacebar` will only be automatic if the list of
-completion candidates can be narrowed down to one unambiguous choice given the
+Using :kbd:`Ctrl+spacebar`, the completion choice will be automatic only if the list of
+completion candidates can be narrowed down to one unambiguous choice, given the
 current prefix.
 
-:kbd:`Tab`-completed Completions
+:kbd:`Tab`-Completed Completions
 ********************************
 
 If you want to be able to tab-complete completions, the setting
-``tab_completion`` must be set to ``true``. By default, ``tab_completion`` is
-set to ``true``. Snippet tab-completion is unaffected by this setting: they
-will always be completed according to their tab trigger.
+``tab_completion`` must be ``true``, which is the default.
+Snippets' tab-completion is unaffected by this setting: they
+always will be completed, or not, according to their tab trigger.
 
-With ``tab_completion`` enabled, completion of items is always automatic, which
-means that, unlike in the case of the completions list, Sublime Text will
-always make a decision for you. The rules to select the best completion are the
-same as above, but in case of ambiguity, Sublime Text will still insert the
-item deemed most suitable.
+With ``tab_completion`` enabled, completion of items always is automatic. This
+means, unlike the case of the completions list, that always Sublime Text will
+make the decision for you. The rules for selecting the best completion are the
+same as described above, but in case of ambiguity, Sublime Text will insert the
+item it deems most suitable.
 
 Inserting a Literal Tab Character
 ---------------------------------

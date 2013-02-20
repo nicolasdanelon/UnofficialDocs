@@ -23,7 +23,7 @@ system's type::
 
 	uname -m
 
-For **OS X**, you can ignore this section: there is only one version of
+For **OS X**, you can ignore this section: there only is one version of
 Sublime Text for OS X.
 
 Windows
@@ -99,15 +99,15 @@ tested and more reliable for everyday use than the others. They come out
 roughly once a month. **The majority of users will want to use stable releases
 only.**
 
-The *dev* and *nightly* channels are unstable, which means that builds
-published through them are likely to contain bugs and to not work reliably.
+The *dev* and *nightly* channels are unstable, which likely means that builds
+published through them will contain bugs and not work reliably.
 They are updated more often than stable releases.
 
 **Dev builds** are available for everyone. On average, they're released twice
-a month. While not quite ready for everyday use yet, they showcase new
+a month. While not yet quite ready for everyday use, they showcase new
 features in a mostly unbroken fashion.
 
-Lastly, **nightly builds** are the bleeding edge, with frequent updates and
+Finally, **nightly builds** are the bleeding edge, with frequent updates and
 also frequent problems of various degrees of severity. They are fun to try
 out, but do so at your own risk. Nightly builds are **only available for
 registered users**.

@@ -2,7 +2,7 @@
 Macros
 ======
 
-Macros are a basic automation facility consisting in sequences of commands. Use
+Macros are a basic automation facility comprising sequences of commands. Use
 them whenever you need to repeat the exact same steps to perform an operation.
 
 Macro files are JSON files with the extension ``.sublime-macro``. Sublime Text
@@ -15,20 +15,20 @@ How to Record Macros
 To start recording a macro, press :kbd:`Ctrl+q` and subsequently execute the
 desired steps one by one. When you're done, press :kbd:`Ctrl+q` again to stop
 the macro recorder. Your new macro won't be saved to a file, but kept in the
-macro buffer instead. You will now be able to run the recorded macro by
-pressing :kbd:`Ctrl+Shift+q` or save it to a file by selecting
-**Tools | Save macro…**.
+macro buffer instead. Now you will be able to run the recorded macro by
+pressing :kbd:`Ctrl+Shift+q`, or save it to a file by selecting
+**Tools | Save macro...**
 
-Note that the macro buffer will only remember the macro recorded latest. Also,
-recorded macros only capture commands sent to the buffer: window level
-commands, such as creating a new file, will be ignored.
+Note that the macro buffer will remember only the latest recorded macro. Also,
+macros only record commands sent to the buffer: window-level
+commands, such as for creating a new file, will be ignored.
 
 How to Edit Macros
 ******************
 
-Alternatively to recording a macro, you can edit it by hand. Save a new file
+As an alternative to recording a macro, you can edit it by hand. Just save a new file
 with the extension ``.sublime-macro`` under :file:`Packages\User` and add
-commands to it. This is how a macro file looks like::
+commands to it. Macro files have this format::
 
    [
        {"command": "move_to", "args": {"to": "hardeol"}},
@@ -40,12 +40,12 @@ See the :doc:`../core/commands` section for more information on commands.
 .. XXX: do we need to escape every kind of quotations marks?
 
 If you're editing a macro by hand, you need to escape quotation marks,
-blank spaces and backslashes by preceding them with ``\``.
+blank spaces and backslashes, by preceding them with ``\``.
 
 Where to Store Macros
 *********************
 
-Macro files can be stored in any package folder, and they will show up
+Macro files can be stored in any package folder, and then will show up
 under **Tools | Macros | <PackageName>**.
 
 

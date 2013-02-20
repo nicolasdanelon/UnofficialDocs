@@ -9,14 +9,14 @@ Syntax Definitions
 Compatibility with Textmate
 ***************************
 
-Sublime Text syntax definitions are generally compatible with Textmate language
+Sublime Text syntax definitions generally are compatible with Textmate language
 files.
 
 File Format
 ***********
 
-Syntax definitions are files in the Plist format with the ``tmLanguage`` extension.
-In this reference files, however, JSON is used instead and converted into Plist.
+Textmate syntax definitions are files in Plist format with the ``tmLanguage`` extension.
+However, for convenience in this reference document, JSON is shown instead.
 
 .. code-block:: js
 
@@ -64,7 +64,7 @@ In this reference files, however, JSON is used instead and converted into Plist.
 
 ``name``
     Descriptive name for the syntax definition. Shows up in the syntax definition dropdown menu
-    located in the bottom right of Sublime Text interface. It's usually the name of the programming
+    located in the bottom right of the Sublime Text interface. It's usually the name of the programming
     language or equivalent.
 
 ``scopeName``
@@ -72,7 +72,7 @@ In this reference files, however, JSON is used instead and converted into Plist.
     Use ``source`` for programming languages and ``text`` for everything else.
 
 ``fileTypes``
-    And array of file type extensions for which this syntax should be automatically activated.
+    An array of file type extensions for which this syntax automatically should be activated.
     Include the extensions without the leading dot.
 
 ``uuid``

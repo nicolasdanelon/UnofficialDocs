@@ -1,32 +1,32 @@
 Build Systems
 =============
 
-Build systems let you run your files through external programs and see the
-output they generate within Sublime Text.
+Build systems let you run your files through external programs and, within
+Sublime Text, see the output they generate.
 
-Build systems consist of two --or optionally three-- parts:
+Build systems consist of two---or optionally three---parts:
 
-* configuration data in JSON format (the *.sublime-build* file contents)
-* a Sublime Text command driving the build process
-* optionally, an external executable file (script, binary file)
+* Configuration data in JSON format (the *.sublime-build* file contents)
+* A Sublime Text command driving the build process
+* An optional, external executable file (script or binary file)
 
 Essentially, *.sublime-build* files are configuration data for an external
-program as well as for the Sublime Text command just mentioned. In them, you
+program, as well as for a Sublime Text command (just mentioned). In them, you
 specify the switches, options and environment information you want forwarded.
 
 The Sublime Text command then receives the data stored in the *.sublime-build*
-file. At this point, it can do whatever it needs to *build* the files. By
-default, build systems will use the ``exec`` command, implemented in
-*Packages/Default/exec.py*. As we'll explain below, you can override this
+file. At this point, it can do whatever it needs to do, to *build* the files. By
+default, build systems will use the ``exec`` command implemented by
+*Packages/Default/exec.py*. As explained below, you can override this
 command.
 
-Lastly, the external program may be a shell script you've created to process
+Finally, the external program may be a shell script you've created to process
 your files, or a well-known utility like ``make`` or ``tidy``. Usually, these
 executable files will receive paths to files or directories, along with
-switches and options to be run with.
+switches and options to run with.
 
-Note that build systems need not call any external program at all if there
-isn't any reason to; you could implement a build system entirely in a
+Note that the build system need call no external program if that's unnecessary;
+then you could implement a build system entirely in a
 Sublime Text command.
 
 
@@ -74,7 +74,7 @@ Options
     The original current directory is restored afterwards.
 
 ``encoding``
-    Optional. Output encoding of ``cmd``. Must be a valid python encoding.
+    Optional. Output encoding of ``cmd``. Must be a valid Python encoding.
     Defaults to ``UTF-8``.
 
 ``target``
@@ -93,7 +93,7 @@ Options
     without modifying your system's settings.
 
 ``shell``
-    Optional. If ``true``, ``cmd`` will be run through the shell (``cmd.exe``, ``bash``\ …).
+    Optional. If ``true``, ``cmd`` will be run through the shell (``cmd.exe``, ``bash``\ ...).
 
 ``path``
     Optional. This string will replace the current process' :const:`PATH` before
@@ -117,8 +117,8 @@ Capturing Error Output with ``file_regex``
 
 The ``file_regex`` option uses a Perl-style regular expression to capture up
 to four fields of error information from the build program's output, namely:
-*file name*, *line number*, *column number* and *error message*. Use
-groups in the pattern to capture this information. The *file name* field and
+*filename*, *line number*, *column number* and *error message*. Use
+groups in the pattern to capture this information. The *filename* field and
 the *line number* field are required.
 
 When error information is captured, you can navigate to error instances in
@@ -186,20 +186,20 @@ Build System Variables
 Build systems expand the following variables in *.sublime-build* files:
 
 ====================== =====================================================================================
-``$file_path``         The directory of the current file, e. g., *C:\\Files*.
-``$file``              The full path to the current file, e. g., *C:\\Files\\Chapter1.txt*.
-``$file_name``         The name portion of the current file, e. g., *Chapter1.txt*.
-``$file_extension``    The extension portion of the current file, e. g., *txt*.
-``$file_base_name``    The name only portion of the current file, e. g., *Document*.
+``$file_path``         The directory of the current file, e.g., *C:\\Files*.
+``$file``              The full path to the current file, e.g., *C:\\Files\\Chapter1.txt*.
+``$file_name``         The name portion of the current file, e.g., *Chapter1.txt*.
+``$file_extension``    The extension portion of the current file, e.g., *txt*.
+``$file_base_name``    The name-only portion of the current file, e.g., *Document*.
 ``$packages``          The full path to the *Packages* folder.
 ``$project``           The full path to the current project file.
 ``$project_path``      The directory of the current project file.
 ``$project_name``      The name portion of the current project file.
 ``$project_extension`` The extension portion of the current project file.
-``$project_base_name`` The name only portion of the current project file.
+``$project_base_name`` The name-only portion of the current project file.
 ====================== =====================================================================================
 
-Place Holders for Variables
+Placeholders for Variables
 ---------------------------
 
 Features found in snippets can be used with these variables. For example::
@@ -227,12 +227,12 @@ Troubleshooting Build Systems
 *****************************
 
 Build systems will look for executables in your :const:`PATH`, unless you specify
-an absolute path to the executable. Therefore, your :const:`PATH` variable must be
-correctly set.
+an absolute path to the executable. Therefore, your :const:`PATH` variable must
+be set correctly.
 
-On some operating systems, the value for :const:`PATH` will vary from a terminal
-window to a graphical application. Thus, even if the command you are using in
-your build system works in the command line, it may not work from Sublime Text.
+On some operating systems, the value of :const:`PATH` may vary between terminal
+windows and graphical applications. Thus, in your build system, even if the
+command you are using works in the command line, it may not work from Sublime Text.
 This is due to user profiles in shells.
 
 To solve this issue, make sure you set the desired :const:`PATH` so that graphical
@@ -241,7 +241,7 @@ information.
 
 Alternatively, you can use the ``path`` element in *.sublime-build* files
 to override the :const:`PATH` used to locate the executable specified in ``cmd``.
-This new value for :const:`PATH` will only be in effect for as long as your
+This new value for :const:`PATH` will be in effect only as long as your
 build system is running. After that, the old :const:`PATH` will be restored.
 
 .. seealso::

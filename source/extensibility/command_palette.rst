@@ -11,10 +11,10 @@ Command Palette
 Overview
 ========
 
-The *command palette* is an interactive list bound to :kbd:`Ctrl+Shift+P` whose
-purpose is to execute commands. The command palette is fed entries with
+The *command palette* bound to :kbd:`Ctrl+Shift+P` is an interactive list whose
+purpose is to execute commands. The command palette is fed by entries in
 commands files. Usually, commands that don't warrant creating a key binding of
-their own are good candidates for inclusion in a ``.sublime-commands`` file.
+their own are good candidates for inclusion in these ``.sublime-commands`` files.
 
 
 File Format (Commands Files)
@@ -50,5 +50,5 @@ How to Use the Command Palette
 #. Press :kbd:`Ctrl+Shift+P`
 #. Select command
 
-The command palette filters entries by context, so whenever you open it, you
+The command palette filters entries by context. This means that whenever you open it, you
 won't always see all the commands defined in every ``.sublime-commands`` file.

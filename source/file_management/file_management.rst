@@ -7,7 +7,7 @@ Goto Anything
 
 Goto Anything lets you **navigate the filesystem** swiftly. Open it with :kbd:`Ctrl+P`.
 As you type into the input area, names of open files and files in open
-directories will be searched, and a preview of the best match will be shown.
+folders will be searched, and a preview of the best match will be shown.
 This preview is *transient*; that is, it won't become the actual active buffer
 until you perform some operation on it. Transient views go away when you press
 :kbd:`Esc`. You will see transient views in other situations; they are something
@@ -33,7 +33,7 @@ To **search symbols** in the active buffer, press :kbd:`Ctrl+R`. The operator
 To **go to a line number**, press :kbd:`Ctrl+G`. The operator ``:`` can be
 used as explained above too.
 
-Searching for symbols will work only with file types that have symbols defined
+Searching for symbols will work only if the file types have symbols defined
 for them.
 
 Sidebar
@@ -57,7 +57,7 @@ operations.
 Projects
 ========
 
-Projects group together (into a unit) sets of files and directories you need to work on.
+Projects group together (into a unit) sets of files and folders you need to work on.
 Once you've set up your project by adding folders in a way that suits you, save
 it and give it a name.
 

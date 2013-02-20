@@ -61,7 +61,7 @@ buffer. The search term will be the part following the ``#`` operator.
 Other Key Bindings to Search in Buffers
 ---------------------------------------
 
-These keybindings work when the search panel is hidden.
+These key bindings work when the search panel is hidden.
 
 ===============================================	==============
 Search Forward Using Most Recent Pattern 		``F3``

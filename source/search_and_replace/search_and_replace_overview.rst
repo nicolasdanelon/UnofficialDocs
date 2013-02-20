@@ -23,7 +23,7 @@ the search and replace facilities in Sublime Text, you should at least learn
 the basics of regular expressions. In this guide we won't explain how to use
 regular expressions.
 
-Typing out *regular expression* gets boring fast, and saying it is actually
+Typing out *regular expression* gets boring fast, and saying it actually is
 even more annoying, so instead nerds usually shorten that to *regexp* or *regex*.
 
 This is how a regex might look::

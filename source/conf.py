@@ -56,10 +56,10 @@ release = '2.0'
 # for a list of supported languages.
 #language = None
 
-# There are two options for replacing |today|: either, you set today to some
-# non-false value, then it is used:
+# There are two options for replacing |today|: if you set today to some
+# non-false value, then that value is used directly:
 #today = ''
-# Else, today_fmt is used as the format for a strftime call.
+# Otherwise, today_fmt is used as the format for a strftime call.
 #today_fmt = '%B %d, %Y'
 
 # List of patterns, relative to source directory, that match files and
@@ -160,7 +160,7 @@ html_show_sphinx = False
 # base URL from which the finished HTML is served.
 #html_use_opensearch = ''
 
-# If nonempty, this is the file name suffix for HTML files (e.g. ".xhtml").
+# If nonempty, this is the filename suffix for HTML files (e.g. ".xhtml").
 #html_file_suffix = ''
 
 # Output file base name for HTML help builder.

@@ -45,14 +45,14 @@ Here's an example of a build system:
 
 In addition to options, also you can use some variables in build systems, as
 we have done above with ``$file``, which expands to the active buffer's
-file name.
+filename.
 
 
 Where to Store Build Systems
 ============================
 
 Build systems must be located somewhere under the *Packages* folder
-(e. g. *Packages/User*). Many packages include their own build systems.
+(e.g. *Packages/User*). Many packages include their own build systems.
 
 
 Running Build Systems

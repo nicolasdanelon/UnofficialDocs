@@ -7,10 +7,10 @@ Flexibility comes at the price of a slightly complex system for applying
 settings. However, here's a rule of thumb:
 
 Always place your personal settings files under *Packages/User* to guarantee
-that they will take precedence over any other conflicting settings files.
+they will take precedence over any other conflicting settings files.
 
-With that out of the way, let's unveil the mysteries of how settings work to
-please masochistic readers.
+With that out of the way, let's unveil, to please masochistic readers,
+the mysteries of how settings work.
 
 
 Format
@@ -24,19 +24,19 @@ Types of Settings
 
 The purpose of each *.sublime-settings* file is determined by its name. These
 names can be descriptive (like *Preferences (Windows).sublime-settings*
-or *Minimap.sublime-settings*), or they can be related to what the settings
-file is controlling. For example, file type settings need to carry the name
-of the *.tmLanguage* syntax definition for the file type. Thus, for the
+or *Minimap.sublime-settings*), or they can relate directly to what the settings
+file is controlling. For example, the file type settings filenames need to be
+correlated with their *.tmLanguage* syntax definitions. Thus, the
 *.py* file type, whose syntax definition is contained in *Python.tmLanguage*,
-the corresponding settings files would be called *Python.sublime-settings*.
+has a corresponding settings file called *Python.sublime-settings*.
 
-Also, some settings files only apply for specific platforms. This can be
-inferred from the file names: *Preferences (Windows).sublime-settings*,
+Also, some settings files only apply to specific platforms. This can be
+inferred from the filenames: *Preferences (Windows).sublime-settings*,
 *Preferences (Linux).sublime-settings*, etc.
 
-This is **important**: Platform-specific settings files in the *Packages/User*
-folder are ignored. This way, you can be sure a single settings file overrides
-all the others.
+**This is important:** Platform-specific settings files in the *Packages/User*
+folder are ignored. In this way, you can be sure that a single Platform-specific
+settings file elsewhere will override all others.
 
 
 How to Access and Edit Common Settings Files
@@ -61,17 +61,17 @@ and overwritten according to predefined rules. See
 Let us remember again that any given settings file in *Packages/User* ultimately
 overrides every other settings file of the same name.
 
-In addition to settings files, Sublime Text maintains *session* data --settings
+In addition to settings files, Sublime Text maintains *session* data---settings
 for the particular set of files being currently edited. Session data is updated
 as you work on files, so if you adjust settings for a particular file in any
 way (mainly through API calls), they will be recorded in the session and will
 take precedence over any applicable *.sublime-settings* files.
 
-To check the value of a setting in effect for a particular file, use
+To check the value of a setting for a particular file being edited, use
 *view.settings().get(<setting_name>)* from the console.
 
-Lastly, it's also worth noting that some settings may be adjusted automatically
-for you. Keep this is mind if you're puzzled about some setting's value. For
+Finally, it's also worth noting that some settings automatically may be adjusted
+for you. Keep this in mind if you're puzzled about some setting's value. For
 instance, this is the case for certain whitespace-related settings and the
 ``syntax`` setting.
 
@@ -90,11 +90,11 @@ hypothetical hierarchy of settings for Python files on Windows:
 Global Editor Settings and Global File Settings
 ===============================================
 
-These settings are stored in *Preferences.sublime-settings* and
-*Preferences (<platform>).sublime-settings* files. The defaults can be
+These settings are stored in files *Preferences.sublime-settings* and
+*Preferences (<platform>).sublime-settings*. The defaults can be
 found in *Packages/Default*.
 
-Valid names for *<platform>* are ``Windows``, ``Linux``, ``OSX``.
+Valid names for *<platform>* are ``Linux``, ``OSX``, and ``Windows``.
 
 
 File Type Settings
@@ -106,18 +106,18 @@ was called *Python.tmLanguage*, we'd need to call our settings file
 *Python.sublime-settings*.
 
 Settings files for specific file types usually live in packages, like
-*Packages/Python*, but there can be multiple settings files for the same
-file type in separate locations.
+*Packages/Python*, but there can be multiple settings files in separate
+locations for the same file type.
 
 Similarly to global settings, one can establish platform-specific settings for
-file types. For example, *Python (Linux).sublime-settings* would only be
-consulted under Linux.
+file types. For example, *Python (Linux).sublime-settings* would be
+consulted only under Linux.
 
-Also, let us emphasize that under *Pakages/User* only *Python.sublime-settings*
-would be read, but not any *Python (<platform>).sublime-settings* variant.
+Also, to reemphasize, under *Packages/User* only *Python.sublime-settings*
+would be read, but not any *Python (<platform>).sublime-settings* variants.
 
 Regardless of its location, any file-type-specific settings file has precedence
-over every global settings file affecting file types.
+over every global settings file affecting the file type.
 
 
 Where to Store User Settings (Once Again)

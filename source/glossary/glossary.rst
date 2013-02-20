@@ -8,7 +8,7 @@ Glossary
 
     buffer
         Data of a loaded file and additional metadata, associated with one or
-        more views. The distinction between *buffer* and *view* is technical.
+        more views. The distinction between *buffer* and *view* is merely technical.
         Most of the time, both terms can be used interchangeably.
 
     view
@@ -21,8 +21,8 @@ Glossary
 
     package
         This term is ambiguous in the context of Sublime Text, because it can
-        refer to a Python package (unlikely), a directory inside ``Packages``
-        or a *.sublime-package* file. Most of the time, it means a directory
+        refer to a Python package (unlikely), a folder inside ``Packages``
+        or a *.sublime-package* file. Most of the time, it means a folder
         inside ``Packages`` containing resources that belong together, which build
         a new feature or provide support for a programming or markup language.
 

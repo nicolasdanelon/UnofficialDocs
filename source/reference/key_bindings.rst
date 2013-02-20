@@ -9,7 +9,7 @@ File Format
 ***********
 
 Key bindings are stored in ``.sublime-keymap`` files and defined in JSON. All
-key map file names need to follow this pattern: ``Default (<platform>).sublime-keymap``.
+key map filenames need to follow this pattern: ``Default (<platform>).sublime-keymap``.
 Otherwise, Sublime Text will ignore them.
 
 
@@ -33,7 +33,7 @@ Key maps are arrays of key bindings. Below you'll find valid elements in key bin
 ``keys``
 	An array of case-sensitive keys to be pressed. Modifiers can be specified
 	with the ``+`` sign. Chords are built by adding elements to the array,
-	e. g. ``["ctrl+k","ctrl+j"]``. Ambiguous chords are resolved with a timeout.
+	e.g. ``["ctrl+k","ctrl+j"]``. Ambiguous chords are resolved with a timeout.
 
 ``command``
 	Name of the command to be executed.
@@ -82,10 +82,10 @@ Context Operands
 	Returns ``true`` if the autocomplete list is visible.
 
 ``has_next_field``
-	Returns ``true`` if there's a next snippet field available.
+	Returns ``true`` if a next snippet field is available.
 
 ``has_prev_field``
-	Returns ``true`` if there's a previous snippet field available.
+	Returns ``true`` if a previous snippet field is available.
 
 ``num_selections``
 	Returns the number of selections.
@@ -97,10 +97,10 @@ Context Operands
 	Returns ``true`` if any panel is visible.
 
 ``following_text``
-	Restricts the test to the text following the caret.
+	Restricts the test just to the text following the caret.
 
 ``preceding_text``
-	Restricts the test to the text preceding the caret.
+	Restricts the test just to the text preceding the caret.
 
 ``selection_empty``
 	Returns ``true`` if the selection is an empty region.
@@ -109,7 +109,7 @@ Context Operands
 	Returns the value of the ``x`` setting. ``x`` can be any string.
 
 ``text``
-	Restricts the test to the selected text.
+	Restricts the test just to the selected text.
 
 ``selector``
 	Returns the current scope.
@@ -132,14 +132,13 @@ Command Mode
 ************
 
 Sublime Text provides a ``command_mode`` setting to prevent key presses from
-being sent to the buffer. This is useful to emulate Vim's modal behavior.
+being sent to the buffer. This is useful when emulating Vim's modal behavior.
 
 
 Bindable Keys
 *************
 
-Keys may be specified literally or by name. Below you'll find the list of
-valid names:
+Keys may be specified literally or by name. Here's the list of valid names:
 
 * ``up``
 * ``down``
@@ -211,17 +210,17 @@ Modifiers
 * ``shift``
 * ``ctrl``
 * ``alt``
-* ``super`` (Windows key, Command key…)
+* ``super`` (Windows key, Command key...)
 
 Warning about Bindable Keys
 ---------------------------
 
 If you're developing a package, keep this in mind:
 
-* ``Ctrl+Alt+<alphanum>`` should not be used on any Windows key bindings.
-* ``Option+<alphanum>`` should not be used on any OS X key bindings.
+* ``Ctrl+Alt+<alphanum>`` should not be used for any Windows key bindings.
+* ``Option+<alphanum>`` should not be used for any OS X key bindings.
 
-In both cases, the user's ability to insert non-ascii characters would be
+In both cases, the user's ability to insert non-ASCII characters would be
 compromised.
 
 If you are the end-user, you are free to remap those key combinations.
@@ -250,7 +249,7 @@ Troubleshooting
 
 .. TODO: fix formatting for API cross-ref.
 
-See `sublime.log_commands(flag)`_  to enable command logging. It may help when
+To enable command logging, see `sublime.log_commands(flag)`_. This may help in
 debugging key maps.
 
 .. _sublime.log_commands(flag): http://www.sublimetext.com/docs/2/api_reference.html

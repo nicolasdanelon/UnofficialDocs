@@ -53,7 +53,7 @@ Editing
 +-----------------+-----------------------------------------------------------+
 | ⌃ + Space       | Select next auto-complete suggestion                      |
 +-----------------+-----------------------------------------------------------+
-| ⌃ + U           | soft undo; jumps to your last change before               |
+| ⌃ + U           | Soft undo; jumps to your last change before               |
 |                 | undoing change when repeated                              |
 +-----------------+-----------------------------------------------------------+
 

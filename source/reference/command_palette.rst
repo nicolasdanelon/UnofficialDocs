@@ -29,8 +29,8 @@ Here's an excerpt from ``Packages/Default/Default.sublime-commands``::
 ``args``
    Arguments to pass to ``command``. Note that to locate the packages folder
    you need to use a snippet-like variable: ``${packages}`` or $packages. This
-   different to other areas of the editor due to different implementations of
-   the lower level layers.
+   differs from other areas of the editor due to different implementations in
+   the lower layers.
 
 
 How to Use the Command Palette

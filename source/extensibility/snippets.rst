@@ -1,15 +1,15 @@
 Snippets
 ========
 
-Whether you are coding or writing the next vampire best-seller, you're likely to
+Whether you are coding, or writing the next vampire best-seller, you're likely to
 need certain short fragments of text again and again. Use snippets to save yourself
-tedious typing. Snippets are smart templates that will insert text for you and
-adapt it to their context.
+tedious typing. Snippets are smart templates that will insert text for you,
+adapting it to their context.
 
-To create a new snippet, select **Tools | New Snippet…**. Sublime Text will
-present you with an skeleton for a new snippet.
+To create a new snippet, select **Tools | New Snippet...** Sublime Text will
+present you with an skeleton for it.
 
-Snippets can be stored under any package's folder, but to keep it simple while
+Snippets can be stored under any package's folder, but for keeping it simple while
 you're learning, you can save them to your ``Packages/User`` folder.
 
 Snippets File Format
@@ -34,29 +34,28 @@ Sublime Text inserts for your convenience):
         <description>My Fancy Snippet</description>
     </snippet>
 
-The ``snippet`` element contains all the information Sublime Text needs in order
-to know *what* to insert, *whether* to insert it and *when*. Let's see all of
+The ``snippet`` element contains all the information Sublime Text needs, in order
+to know *what* to insert, *whether* to insert and *when*. Let's see all of
 these parts in turn.
 
 ``content``
-    The actual snippet. Snippets can range from simple to fairly complex
+    The actual snippet. Snippets can range from simple, to fairly complex
     templates. We'll look at examples of both later.
 
     Keep the following in mind when writing your own snippets:
 
         - If you want the get a literal ``$``, you have to escape it like this: ``\$``.
 
-        - When writing a snippet that contains indentation, always use tabs. The
-          tabs will be transformed into spaces when the snippet is inserted if the
-          option ``translateTabsToSpaces`` is set to ``true``.
+        - When writing a snippet that contains indentation, always use tabs.
+          When the snippet is inserted, the tabs will be transformed into spaces
+          if the option ``translateTabsToSpaces`` is ``true``.
 
-        The ``content`` must be included in a ``<![CDATA[…]]>`` section.
-        Snippets won't work if you don't do this!
+        - The ``content`` must be included in a ``<![CDATA[...]]>`` section.
+          Snippets won't work if you don't do this!
 
 ``tabTrigger``
-    Defines the sequence of keys you will press to insert this snippet. The
-    snippet will kick in as soon as you hit the :kbd:`Tab` key after typing
-    this sequence.
+    Defines the sequence of keys you press to insert this snippet. After typing
+    this sequence, the snippet will kick in as soon as you hit the :kbd:`Tab` key.
 
     A tab trigger is an implicit key binding.
 
@@ -65,7 +64,7 @@ these parts in turn.
     See :ref:`scopes-and-scope-selectors` for more information.
 
 ``description``
-    Used when showing the snippet in the Snippets menu. If not present, Sublime Text
+    Used for displaying the snippet in the Snippets menu. If this is not present, Sublime Text
     defaults to the name of the snippet.
 
 With this information, you can start writing your own snippets as described in
@@ -82,21 +81,21 @@ Environment Variables
 ---------------------
 
 Snippets have access to contextual information in the form of environment variables.
-Sublime Text sets the values of the variables listed below automatically.
+Sublime Text automatically sets the values of the variables listed below.
 
 You can also add your own variables to provide extra information. These custom
 variables are defined in ``.sublime-options`` files.
 
 ======================    ====================================================================================
-**$PARAM1, $PARAM2…**      Arguments passed to the ``insert_snippet`` command. (Not covered here.)
+**$PARAM1, $PARAM2...**    Arguments passed to the ``insert_snippet`` command. (Not covered here.)
 **$SELECTION**             The text that was selected when the snippet was triggered.
-**$TM_CURRENT_LINE**       Content of the line the cursor was in when the snippet was triggered.
-**$TM_CURRENT_WORD**       Current word under the cursor when the snippet was triggered.
-**$TM_FILENAME**           File name of the file being edited including extension.
-**$TM_FILEPATH**           File path to the file being edited.
+**$TM_CURRENT_LINE**       Content of the cursor's line when the snippet was triggered.
+**$TM_CURRENT_WORD**       Word containing the cursor when the snippet was triggered.
+**$TM_FILENAME**           Name of the file being edited, including extension.
+**$TM_FILEPATH**           Path to the file being edited.
 **$TM_FULLNAME**           User's user name.
-**$TM_LINE_INDEX**         Column the snippet is being inserted at, 0 based.
-**$TM_LINE_NUMBER**        Row the snippet is being inserted at, 1 based.
+**$TM_LINE_INDEX**         Column where the snippet is being inserted, 0 based.
+**$TM_LINE_NUMBER**        Row where the snippet is being inserted, 1 based.
 **$TM_SELECTED_TEXT**      An alias for **$SELECTION**.
 **$TM_SOFT_TABS**          ``YES`` if ``translate_tabs_to_spaces`` is true, otherwise ``NO``.
 **$TM_TAB_SIZE**           Spaces per-tab (controlled by the ``tab_size`` option).
@@ -127,7 +126,7 @@ Fields
 
 With the help of field markers, you can cycle through positions within the
 snippet by pressing the :kbd:`Tab` key. Fields are used to walk you through the
-customization of a snippet once it's been inserted.
+customization of a snippet, once it's been inserted.
 
 .. code-block:: perl
 
@@ -139,7 +138,7 @@ In the example above, the cursor will jump to ``$1`` if you press :kbd:`Tab` onc
 If you press :kbd:`Tab` a second time, it will advance to ``$2``, etc. You can also
 move backwards in the series with :kbd:`Shift+Tab`. If you press :kbd:`Tab` after the
 highest tab stop, Sublime Text will place the cursor at the end of the snippet's
-content so that you can resume normal editing.
+content, enabling you to resume normal editing.
 
 If you want to control where the exit point should be, use the ``$0`` mark.
 
@@ -149,7 +148,7 @@ Mirrored Fields
 ---------------
 
 Identical field markers mirror each other: when you edit the first one, the rest
-will be populated with the same value in real time.
+will be populated in real time with the same value.
 
 .. code-block:: perl
 
@@ -160,12 +159,12 @@ will be populated with the same value in real time.
 
 In this example, "User name" will be filled out with the same value as "First Name".
 
-Place Holders
+Placeholders
 -------------
 
 By expanding the field syntax a little bit, you can define default values for
-a field. Place holders are useful when there's a general case for your snippet
-but you still want to keep its customization convenient.
+a field. Placeholders are useful whenever there's a general case for your snippet,
+but still you want it conveniently to be customizable.
 
 .. code-block:: perl
 
@@ -174,7 +173,7 @@ but you still want to keep its customization convenient.
     Address: ${3:Main Street 1234}
     User name: $1
 
-Variables can be used as place holders:
+Variables can be used as placeholders:
 
 .. code-block:: perl
 
@@ -183,7 +182,7 @@ Variables can be used as place holders:
     Address: ${3:Main Street 1234}
     User name: ${4:$TM_FULLNAME}
 
-And you can nest place holders within other place holders too:
+And you can nest placeholders within other placeholders too:
 
 .. code-block:: perl
 
@@ -195,7 +194,7 @@ Substitutions
 .. WARNING::
     This section is a draft and may contain inaccurate information.
 
-In addition to the place holder syntax, tab stops can specify more complex operations
+In addition to the placeholder syntax, tab stops can specify more complex operations
 with substitutions. Use substitutions to dynamically generate text based on a mirrored
 tab stop.
 
@@ -205,7 +204,7 @@ The substitution syntax has the following syntaxes:
     - ``${var_name/regex/format_string/options}``
 
 **var_name**
-    The variable name: 1, 2, 3…
+    The variable name: 1, 2, 3...
 
 **regex**
     Perl-style regular expression: See the `Boost library reference for regular expressions <http://www.boost.org/doc/libs/1_44_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html>`_.

@@ -1,7 +1,7 @@
 Extending Sublime Text
 ======================
 
-As it can be seen from the long list of topics below, Sublime Text is a very
+As can be seen from the long list of topics below, Sublime Text is a very
 extensible editor.
 
 .. toctree::

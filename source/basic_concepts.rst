@@ -9,9 +9,9 @@ Conventions in This Guide
 ==========================
 
 This guide is written from the perspective of a Windows user, but most
-instructions should only require trivial changes to work on other platforms.
+instructions should require only trivial changes to work on other platforms.
 
-Relative paths (e. g. *Packages/User*) start at the *data directory* unless
+Relative paths (e.g. *Packages/User*) start at the *data directory* unless
 otherwise noted. The *data directory* is explained further below.
 
 We assume default key bindings when indicating keyboard shortcuts. Due to the
@@ -32,7 +32,7 @@ your mind until you've spent some time using Sublime Text. Keep exploring the
 editor and looking around in this guide, and everything will fall into place
 at some point.
 
-Sublime Text is undeniably a versatile tool for programmers, but you don't
+Sublime Text undeniably is a versatile tool for programmers, but you don't
 need to be one to use it, or even to configure it to make it the perfect tool
 for your writing. If you're a hacker, however, you are about to spend the
 remainder of your day playing around with this editor.
@@ -52,7 +52,7 @@ For **portable installations**, look inside *Sublime Text 2/Data*. Here, the
 *Sublime Text 2* part refers to the directory to which you've extracted the
 contents of the compressed file containing Sublime Text 2.
 
-Note that only for portable installations does a directory named *Data* exist.
+Note that only in portable installations does a directory named *Data* exist.
 For the other types of installation, the data directory is the location
 indicated above.
 
@@ -97,7 +97,7 @@ Confused? Let's try again more slowly:
 powerful at the same time. *API* is short for ‘Application Programming
 Interface', which is a fancy way of saying that Sublime Text 2 is prepared to
 be programmed by the user. Put differently, Subime Text gives the user access
-to its internals through Python. Lastly, a *console* is a little window inside
+to its internals through Python. Finally, a *console* is a little window inside
 Sublime Text which lets you type in short snippets of Python code and run them.
 The console also shows text output by Sublime Text or its plugins.
 
@@ -127,7 +127,7 @@ macros, snippets or create new features --where *feature* means ‘anything you 
 think of'. OK, maybe not *anything*, but Sublime Text definitely hands you over
 a good deal of control.
 
-These settings files are simply text files following a special structure or
+These settings files simply are text files following a special structure or
 *format*: JSON predominates, but you'll find XML files too.
 
 In this guide, we refer collectively to all these disparate configuration
