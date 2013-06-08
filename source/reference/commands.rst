@@ -86,6 +86,12 @@ Commands
 	Closes the active view and, under certain circumsances, the whole application.
 	XXX Sounds kinda wrong.
 
+**save**
+        Saves the active file.
+
+**prompt_save_as**
+        Prompts for a new file name and saves the active file.
+
 **toggle_sidebar**
 	Shows or hides the sidebar.
 
@@ -364,6 +370,12 @@ Commands
 
 **lower_case**
 	Makes the selection lower case.
+
+**title_case**
+	Capitalizes the selection's first character and turns the rest into lower case.
+
+**swap_case**
+	Swaps the case of each character in the selection.
 
 **set_mark**
 	XXX
