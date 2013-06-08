@@ -6,7 +6,7 @@ Snippets
 Compatibility with Textmate
 ***************************
 
-Sublime Text snippets generally are compatible with Textmate snippets.
+Generally, Sublime Text snippets are compatible with Textmate snippets.
 
 File Format
 ***********
@@ -26,13 +26,13 @@ Snippet files are XML files with the ``sublime-snippet`` extension.
     Actual snippet content.
 
 ``tabTrigger``
-    Implicit key binding for this snippet. The last key (implicitly) is ``TAB``.
+    Implicit key binding for this snippet. The last key (implicit) is ``TAB``.
 
 ``scope``
     Scope selector to activate this snippet.
 
 ``description``
-    User-friendly description, for when it's a menu item.
+    Friendly description to be used when the snippet is shown as a menu item.
 
 Escape Sequences
 ****************

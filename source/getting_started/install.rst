@@ -23,7 +23,7 @@ system's type::
 
 	uname -m
 
-For **OS X**, you can ignore this section: there only is one version of
+For **OS X**, you can ignore this section: there is only one version of
 Sublime Text for OS X.
 
 Windows
@@ -104,8 +104,8 @@ published through them will contain bugs and not work reliably.
 They are updated more often than stable releases.
 
 **Dev builds** are available for everyone. On average, they're released twice
-a month. While not yet quite ready for everyday use, they showcase new
-features in a mostly unbroken fashion.
+a month. While not yet ready for everyday use, they showcase new features in a
+mostly unbroken fashion.
 
 Finally, **nightly builds** are the bleeding edge, with frequent updates and
 also frequent problems of various degrees of severity. They are fun to try

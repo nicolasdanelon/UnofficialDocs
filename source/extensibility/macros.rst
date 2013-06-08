@@ -21,7 +21,7 @@ pressing :kbd:`Ctrl+Shift+q`, or save it to a file by selecting
 
 Note that the macro buffer will remember only the latest recorded macro. Also,
 macros only record commands sent to the buffer: window-level
-commands, such as for creating a new file, will be ignored.
+commands, such creating a new file, will be ignored.
 
 How to Edit Macros
 ******************
@@ -40,7 +40,7 @@ See the :doc:`../core/commands` section for more information on commands.
 .. XXX: do we need to escape every kind of quotations marks?
 
 If you're editing a macro by hand, you need to escape quotation marks,
-blank spaces and backslashes, by preceding them with ``\``.
+blank spaces and backslashes by preceding them with ``\``.
 
 Where to Store Macros
 *********************

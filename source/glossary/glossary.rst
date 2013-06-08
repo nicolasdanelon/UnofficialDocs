@@ -8,7 +8,7 @@ Glossary
 
     buffer
         Data of a loaded file and additional metadata, associated with one or
-        more views. The distinction between *buffer* and *view* is merely technical.
+        more views. The distinction between *buffer* and *view* is technical.
         Most of the time, both terms can be used interchangeably.
 
     view
@@ -30,4 +30,4 @@ Glossary
         An input/output widget, such as a search panel or the output panel.
 
     overlay
-        An input widget of a special kind. E.g., Goto Anything is an overlay.
+        An input widget of a special kind. For example, Goto Anything is an overlay.

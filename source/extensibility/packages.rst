@@ -19,7 +19,7 @@ Here's a list of the typical resources living inside packages:
     - snippets (``.sublime-snippet``)
     - themes (``.sublime-theme``)
 
-Some packages may include files in support of other packages or core
+Some packages may include support files for other packages or core
 features. For example, the spell checker uses :file:`Packages\Language - English`
 as a data store for English dictionaries.
 
@@ -38,21 +38,20 @@ Sublime Text doesn't use this division in any way.
    Sublime Text includes these packages in every installation, though
    technically they are not required.
    These shipped packages enhance Sublime Text out of the
-   box. They may have been contributed by users, or by third parties.
+   box. They may have been contributed by users or third parties.
 
 **user packages**
-   These packages are installed by the user following the quite common practice
-   of further extending Sublime Text.
+   Packages installed by the user to extend Sublime Text's functionaility.
    They are not part of any Sublime Text installation, and always are contributed
    by users or third parties.
 
 **installed packages**
-   Any package that Sublime Text can restore, in case the package was deleted.
+   Any package that, if deleted, Sublime Text will be able to restore.
 
 Let's emphasize again that you don't need to memorize this classification.
 
-Also, it's worth noting that by *third party*, we refer mainly to users of other
-editors such as Textmate.
+Also, it's worth noting that by *third party* we mainly refer to users of other
+editors, such as Textmate.
 
 
 Installation of Packages
@@ -63,8 +62,8 @@ There are two main ways to install packages:
 	- ``.sublime-package`` files
 	- version control systems
 
-Ultimately, installing a package comprises simply inserting a folder
-containing Sublime Text resources under ``Packages``. The only thing that
+Ultimately, installing a package is simply a matter of copying a folder
+containing Sublime Text resources thato ``Packages``. The only thing that
 changes from one system to another is how you copy these files.
 
 .. sidebar:: Installing Packages vs Installed Packages
@@ -105,12 +104,12 @@ Packages and Magic
 ******************
 
 Sublime Text deals with packages quite simply, without much hidden magic.
-There are two notable exceptions: macros defined in any package automatically appear under
+There are two notable exceptions: Macros defined in any package automatically appear under
 **Tools | Macros | <Your Package>**, and snippets from any package appear under
 **Tools | Snippets | <Your Package>**.
 
 However, as mentioned at the beginning, Sublime Text follows some rules for packages.
-For instance, never will ``Package/User`` be clobbered during updates of the
+For instance, ``Package/User`` will never be clobbered during updates to the
 software.
 
 .. sidebar:: The ``User`` Package
@@ -125,11 +124,11 @@ Merging and Order of Precedence
 -------------------------------
 
 ``Packages/Default`` and ``Packages/User`` also receive special treatment when
-merging files (e.g. ``.sublime-keymap`` and ``.sublime-settings`` files). Before
-merging can take place, the files have to be arranged in some order. To that end,
-Sublime Text sorts them alphabetically by name, with the exception of the folders
-``Default`` and ``User``. Always, files contained in ``Default`` will go to the front
-of the list, and those in ``User`` to the end.
+merging files (e.g. ``.sublime-keymap`` and ``.sublime-settings`` files).
+Before merging can take place, the files have to be arranged in some order. To
+that end, Sublime Text sorts them alphabetically by name, with the exception
+of the folders ``Default`` and ``User``. Files contained in ``Default`` will
+always go to the front of the list and, those in ``User``, to the end.
 
 
 Restoring Packages
@@ -149,7 +148,8 @@ To revert Sublime Text to its default configuration, delete the data directory
 and restart the editor. Keep in mind, though, that the ``Installed Packages``
 folder will be deleted too, so you'll lose all your installed packages.
 
-Always make sure to back up your data before taking an extreme measure such as this.
+Always make sure to back up your data before taking an extreme measure like
+this one.
 
 
 The ``Installed Packages`` Directory
@@ -163,4 +163,4 @@ The ``Pristine Packages`` Directory
 ***********************************
 
 You will find this folder in the data directory. It contains a copy of every
-shipped (which includes every core) package. It is used to restore ``Packages``.
+shipped and core package. It is used to restore ``Packages``.

@@ -10,7 +10,7 @@ Global Settings
 
 
 ``theme``
-   Theme to be used. Accepts a file base name (e.g.: ``Default.sublime-theme``).
+   Theme to be used. Accepts a file base name (for example, ``Default.sublime-theme``).
 ``remember_open_files``
    Determines whether to reopen the buffers that were open when Sublime Text was last closed.
 ``folder_exclude_patterns``
@@ -66,7 +66,7 @@ Visual Settings
 
 ``color_scheme``
    Sets the colors used for text highlighting. Accepts a path rooted at the
-   data directory (e.g.: ``Packages/Color Scheme - Default/Monokai Bright.tmTheme``).
+   data directory (for example, ``Packages/Color Scheme - Default/Monokai Bright.tmTheme``).
 ``font_face``
    Font face to be used for editable text.
 ``font_size``
@@ -78,7 +78,7 @@ Visual Settings
    Toggles display of gutter.
 ``rulers``
    Columns in which to display vertical rules. Accepts a list of numeric values
-   (e.g. ``[79, 89, 99]`` or a single numeric value (e.g. ``79``).
+   (such as ``[79, 89, 99]``) or a single numeric value (for example, ``79``).
 ``draw_minimap_border``
    Set to ``true`` to draw a border around the minimap's region corresponding
    to the the view's currently visible text. The active color scheme's
@@ -109,7 +109,7 @@ Visual Settings
 ``match_brackets``
    Set to ``false`` to disable underlining the brackets surrounding the cursor.
 ``match_brackets_content``
-   Set this to ``false`` if you'd rather highlight only the brackets when the
+   Set this to ``false`` if you'd rather have brackets highlighted only when the
    cursor is next to one.
 ``match_brackets_square``
    Set to ``false`` to stop highlighting square brackets. Only takes effect if
@@ -135,8 +135,8 @@ Automatic Behavior
 ``word_separators``
    Characters considered to divide words for actions like advancing the cursor,
    etc. Not used for every context where a notion of a word separator is
-   useful (e.g.: word wrapping). In some contexts, the text might be
-   tokenized based on other criteria (e.g. the syntax definition rules).
+   useful (for example, word wrapping). In some contexts, the text might be
+   tokenized based on other criteria (for example, the syntax definition rules).
 ``ensure_newline_at_eof_on_save``
    Always adds a new line at the end of the file if not present when saving.
 
@@ -150,11 +150,11 @@ System and Miscellaneous Settings
    Toggles the spell checker.
 ``dictionary``
    Word list to be used by the spell checker. Accepts a path rooted at the
-   data directory (e.g.: ``Packages/Language - English/en_US.dic``). You can
+   data directory (such as ``Packages/Language - English/en_US.dic``). You can
    `add more dictionaries <http://extensions.services.openoffice.org/en/dictionaries>`_.
 ``fallback_encoding``
    The encoding to use when the encoding can't be determined automatically.
-   ASCII, UTF-8 and UTF-16 encodings automatically will be detected.
+   ASCII, UTF-8 and UTF-16 encodings will be detected automatically .
 ``default_line_ending``
    Determines what characters to use to designate new lines. Valid values:
    ``system`` (OS-dependant), ``windows`` (``CRLF``) and ``unix`` (``LF``).

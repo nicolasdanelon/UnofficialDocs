@@ -59,7 +59,7 @@ always keep in mind their differing needs in regards to escape sequences, etc.
 Scopes
 ******
 
-Scopes are a key concept in Sublime Text; essentially, these are named text
+Scopes are a key concept in Sublime Text. Essentially, they are named text
 regions in a buffer. They don't do anything by themselves, but Sublime Text peeks
 at them when it needs contextual information.
 
@@ -115,10 +115,10 @@ By way of example, let's create a syntax definition for Sublime Text snippets.
 We'll be styling the actual snippet content, not the ``.sublime-snippet`` file.
 
 .. note::
-  Since syntax definitions primarily are used to enable syntax highlighting,
+  Since syntax definitions are primarily used to enable syntax highlighting,
   we'll use the phrase *to style* to mean *to break down a source code file into
   scopes*. Keep in mind, however, that colors are a different thing from syntax
-  definitions and that scopes have many more uses, besides just for syntax highlighting.
+  definitions and that scopes have many more uses besides syntax highlighting.
 
 Here are the elements we want to style in a snippet:
 
@@ -159,7 +159,7 @@ Let's examine now the key elements.
 
 ``name``
     The name that Sublime Text will display in the syntax definition drop-down list.
-    Use a short, descriptive name. Typically, you will use here the name of the programming
+    Use a short, descriptive name. Typically, you will use the name of the programming
     language you are creating the syntax definition for.
 
 ``scopeName``
@@ -169,7 +169,7 @@ Let's examine now the key elements.
 
 ``fileTypes``
     This is a list of file extensions. When opening files of these types,
-    Sublime Text automatically will activate this syntax definition for them.
+    Sublime Text will automatically activate this syntax definition for them.
 
 ``patterns``
     A container for your patterns.
@@ -220,7 +220,7 @@ Matches take this form:
     }
 
 ``match``
-    A regular expression Sublime Text will use, to find matches.
+    A regular expression Sublime Text will use to find matches.
 
 ``name``
     The name of the scope that should be applied to any occurrences of ``match``.
@@ -360,7 +360,7 @@ Begin-End Rules
 
 Up to now we've been using a simple rule. Although we've seen how to dissect patterns
 into smaller components, sometimes you'll want to target a larger portion of your
-source code, clearly delimited by start and end marks.
+source code that is clearly delimited by start and end marks.
 
 Literal strings enclosed by quotation marks or other delimiting constructs are
 better dealt with by begin-end rules. This is a skeleton for one of these rules::
@@ -370,8 +370,8 @@ better dealt with by begin-end rules. This is a skeleton for one of these rules:
         "end": ""
       }
 
-Well, at least in their simplest version. Let's take a look at one which includes all the
-available options::
+Well, at least in their simplest version. Let's take a look at one that
+includes all available options::
 
        { "name": "",
          "begin": "",
@@ -400,7 +400,7 @@ see them individually.
     Regex for the end mark for this scope.
 
 ``beginCaptures``
-    Captures for the ``begin`` marker, they work like captures for simple matches. Optional.
+    Captures for the ``begin`` marker. They work like captures for simple matches. Optional.
 
 ``endCaptures``
     Same as ``beginCaptures`` but for the ``end`` marker. Optional.
@@ -436,13 +436,13 @@ keys are self-explanatory: they define a region enclosed between ``${<NUMBER>:``
 ``beginCaptures`` further divides the begin mark into smaller scopes.
 
 The most interesting part, however, is ``patterns``. Recursion, and the
-importance of ordering, finally have made their appearance here.
+importance of ordering, have finally made their appearance here.
 
 We've seen above that fields can be nested. In order to account for this, we
 need to style nested fields recursively. That's what the ``include`` rule does
-when we furnish it the ``$self`` value: it recursively applies our entire syntax
-definition to merely a portion of the text captured by our begin-end rule. This
-portion excludes the text individually consumed by the regexes for ``begin`` and
+when we furnish it the ``$self`` value: it recursively applies our entire
+syntax definition the text captured by our begin-end rule. This portion
+excludes the text individually consumed by the regexes for ``begin`` and
 ``end``.
 
 Remember, matched text is consumed; thus, it is excluded from the next match attempt.
@@ -454,7 +454,7 @@ safely tell Sublime Text to give any remaining text (``.``) a literal string sco
 Final Touches
 -------------
 
-Finally, let's style escape sequences and illegal sequences, and then we can wrap up.
+Lastly, let's style escape sequences and illegal sequences, and then we can wrap up.
 
 ::
 

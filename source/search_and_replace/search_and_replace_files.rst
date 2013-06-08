@@ -33,7 +33,7 @@ You can combine these filters separating them with commas, for example:
 
 	/C/Users/Joe/Top Secret,-*.html,<open files>
 
-Press the **'...'** button in the search panel to display a menu containing
+Press the **...** button in the search panel to display a menu containing
 these options.
 
 .. xxx what kind of patterns are those?

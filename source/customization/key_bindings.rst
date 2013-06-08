@@ -13,7 +13,7 @@ File Format
 ===========
 
 Key bindings are defined in JSON and stored in ``.sublime-keymap`` files. In
-order better to integrate with each platform, there are separate key map files
+order to integrate better with each platform, there are separate key map files
 for Linux, OSX and Windows. Only key maps for the corresponding platform will
 be loaded.
 
@@ -49,7 +49,7 @@ contextual awareness.
 Passing Arguments
 *****************
 
-Arguments are specified in the ``args`` hash key::
+Arguments are specified in the ``args`` key::
 
 		{ "keys": ["shift+enter"], "command": "insert", "args": {"characters": "\n"} }
 
@@ -72,5 +72,5 @@ caret's position or some other state.
 This key binding translates to *clear snippet fields and resume normal editing
 if there is a next field available*. Thus, unless you are cycling through snippet
 fields, pressing :kbd:`ESC` will **not** trigger this key binding. (However,
-something else instead might occur if :kbd:`ESC` happens to be bound to a
+something else might occur instead if :kbd:`ESC` happens to be bound to a
 different context too---and that's likely to be the case for :kbd:`ESC`.)

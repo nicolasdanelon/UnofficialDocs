@@ -1,7 +1,7 @@
 Commands
 ========
 
-Commands are ubiquitous in Sublime Text; key bindings, menu items and macros
+Commands are ubiquitous in Sublime Text: key bindings, menu items and macros
 all work through the command system. They are found in other places too.
 
 Some commands are implemented in the editor's core, but many of them are
@@ -20,7 +20,7 @@ Anatomy of a Command
 
 Commands have a name separated by underscores (snake_case) like ``hot_exit``, and can take
 a dictionary of arguments whose keys must be strings and whose values must
-be JSON types. Here're a few examples of commands run from the Python console::
+be JSON types. Here are a few examples of commands run from the Python console::
 
    view.run_command("goto_line", {"line": 10})
    view.run_command('insert_snippet', {"contents": "<$SELECTION>"})

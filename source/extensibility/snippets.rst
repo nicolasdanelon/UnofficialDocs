@@ -1,7 +1,7 @@
 Snippets
 ========
 
-Whether you are coding, or writing the next vampire best-seller, you're likely to
+Whether you are coding or writing the next vampire best-seller, you're likely to
 need certain short fragments of text again and again. Use snippets to save yourself
 tedious typing. Snippets are smart templates that will insert text for you,
 adapting it to their context.
@@ -9,7 +9,7 @@ adapting it to their context.
 To create a new snippet, select **Tools | New Snippet...** Sublime Text will
 present you with an skeleton for it.
 
-Snippets can be stored under any package's folder, but for keeping it simple while
+Snippets can be stored under any package's folder, but to keep it simple while
 you're learning, you can save them to your ``Packages/User`` folder.
 
 Snippets File Format
@@ -34,12 +34,12 @@ Sublime Text inserts for your convenience):
         <description>My Fancy Snippet</description>
     </snippet>
 
-The ``snippet`` element contains all the information Sublime Text needs, in order
+The ``snippet`` element contains all the information Sublime Text needs in order
 to know *what* to insert, *whether* to insert and *when*. Let's see all of
 these parts in turn.
 
 ``content``
-    The actual snippet. Snippets can range from simple, to fairly complex
+    The actual snippet. Snippets can range from simple to fairly complex
     templates. We'll look at examples of both later.
 
     Keep the following in mind when writing your own snippets:
@@ -54,7 +54,7 @@ these parts in turn.
           Snippets won't work if you don't do this!
 
 ``tabTrigger``
-    Defines the sequence of keys you press to insert this snippet. After typing
+    Defines the sequence of keys that must be pressed to insert this snippet. After typing
     this sequence, the snippet will kick in as soon as you hit the :kbd:`Tab` key.
 
     A tab trigger is an implicit key binding.
@@ -64,7 +64,7 @@ these parts in turn.
     See :ref:`scopes-and-scope-selectors` for more information.
 
 ``description``
-    Used for displaying the snippet in the Snippets menu. If this is not present, Sublime Text
+    Used for displaying the snippet in the Snippets menu. If unavailable, Sublime Text
     defaults to the name of the snippet.
 
 With this information, you can start writing your own snippets as described in
@@ -90,7 +90,7 @@ variables are defined in ``.sublime-options`` files.
 **$PARAM1, $PARAM2...**    Arguments passed to the ``insert_snippet`` command. (Not covered here.)
 **$SELECTION**             The text that was selected when the snippet was triggered.
 **$TM_CURRENT_LINE**       Content of the cursor's line when the snippet was triggered.
-**$TM_CURRENT_WORD**       Word containing the cursor when the snippet was triggered.
+**$TM_CURRENT_WORD**       Word under the cursor when the snippet was triggered.
 **$TM_FILENAME**           Name of the file being edited, including extension.
 **$TM_FILEPATH**           Path to the file being edited.
 **$TM_FULLNAME**           User's user name.
@@ -126,7 +126,7 @@ Fields
 
 With the help of field markers, you can cycle through positions within the
 snippet by pressing the :kbd:`Tab` key. Fields are used to walk you through the
-customization of a snippet, once it's been inserted.
+customization of a snippet after it's been inserted.
 
 .. code-block:: perl
 
@@ -164,7 +164,7 @@ Placeholders
 
 By expanding the field syntax a little bit, you can define default values for
 a field. Placeholders are useful whenever there's a general case for your snippet,
-but still you want it conveniently to be customizable.
+but still you still want to keep it customizable.
 
 .. code-block:: perl
 

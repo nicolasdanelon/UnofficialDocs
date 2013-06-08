@@ -73,13 +73,13 @@ Sublime Text 2.
 All new commands derive from the ``*Command`` classes defined in ``sublime_plugin``
 (more on this later).
 
-The rest of the code is concerned with the particulars of ``TextCommand``, or with
-the API that we'll discuss in the next sections.
+The rest of the code is concerned with the particulars of ``TextCommand`` or with
+the API. We'll discuss those topics in later sections.
 
 Before moving on, though, we'll look at how we invoked the new command. First we
 opened the Python console, and then we issued a call to ``view.run_command()``. This
 is rather an inconvenient way of using plugins, but it's often useful when
-you're in a plugin development phase. For now, keep in mind that your commands
+you're in the development phase of a plugin. For now, keep in mind that your commands
 can be accessed both through key bindings and by other means, just like other commands.
 
 Conventions for Command Names
@@ -192,7 +192,7 @@ plugins go, this a very bad one.
 
 .. note::
 	Make sure you don't keep this plugin around after trying it or it will
-	interfere with Sublime Text's autocompletion system.
+	interfere with Sublime Text's autocompletion.
 
 
 Learning the API
@@ -201,5 +201,5 @@ Learning the API
 In order to create plugins, you need to get acquainted with the Sublime Text
 API and the available commands. Documentation on both is scarce at the time of
 this writing, but you can read existing code and learn from it too. In
-particular, the ``Packages/Default`` folder contains many examples utilizing
+particular, the ``Packages/Default`` folder contains many examples of
 undocumented commands and API calls.

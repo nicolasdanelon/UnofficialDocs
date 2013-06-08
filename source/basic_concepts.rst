@@ -19,8 +19,8 @@ way Sublime Text maps keys to commands, **some key bindings won't match your
 locale's keyboard layout**.
 
 
-With Great Power Come Lots of Questions
-========================================
+With Great Power Come Many Questions
+====================================
 
 Sublime Text is a very extensible and customizable editor. It does many things
 out of the box, but if you spend some time tailoring it to your exact needs,
@@ -32,7 +32,7 @@ your mind until you've spent some time using Sublime Text. Keep exploring the
 editor and looking around in this guide, and everything will fall into place
 at some point.
 
-Sublime Text undeniably is a versatile tool for programmers, but you don't
+Sublime Text is certainly a versatile tool for programmers, but you don't
 need to be one to use it, or even to configure it to make it the perfect tool
 for your writing. If you're a hacker, however, you are about to spend the
 remainder of your day playing around with this editor.
@@ -140,7 +140,7 @@ write emails faster or code in a certain programming language).
 Textmate Compatibility
 ======================
 
-This information is mainly useful for Textmate users who are now using Sublime
+This information is mainly useful for Textmate expats who are now using Sublime
 Text. Textmate is an editor for the Mac.
 
 Sublime Text 2 is fairly compatible with Textmate bundles with the notable
@@ -155,8 +155,7 @@ Vi Emulation
 ============
 
 This information is mainly useful for dinosaurs and people who like to drop
-the term [RSI](http://en.wikipedia.org/wiki/Repetitive_strain_injury)
-in conversations. Vi is an ancient modal editor that lets the
+the term RSI in conversations. Vi is an ancient modal editor that lets the
 user perform all operations from the keyboard. Vim, a modern version of vi,
 is still in widespread use.
 
@@ -170,8 +169,8 @@ documentation.
 Emacs
 =====
 
-This information is hardly useful for anyone. Emacs is... well, nobody really
-knows precisely what emacs is, though some people edit text with it.
+This information is hardly useful for anyone. Emacs is... Well, nobody really
+knows what emacs is, but some people edit text with it.
 
 If you are an emacs user, you're probably not reading this.
 

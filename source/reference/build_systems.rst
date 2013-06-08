@@ -1,8 +1,8 @@
 Build Systems
 =============
 
-Build systems let you run your files through external programs and, within
-Sublime Text, see the output they generate.
+Build systems let you run your files through external programs without leaving
+Sublime Text, and see the output they generate.
 
 Build systems consist of two---or optionally three---parts:
 
@@ -25,9 +25,9 @@ your files, or a well-known utility like ``make`` or ``tidy``. Usually, these
 executable files will receive paths to files or directories, along with
 switches and options to run with.
 
-Note that the build system need call no external program if that's unnecessary;
-then you could implement a build system entirely in a
-Sublime Text command.
+Note that build systems can but don't need to call external programs; a valid
+build system could be implemented entirely in Python in a Sublime Text
+command.
 
 
 File Format

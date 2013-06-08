@@ -61,10 +61,10 @@ but they all must be valid JSON types.
 How to Call Commands from the API
 *********************************
 
-Use a reference to a ``View`` or a ``Window``, or ``sublime`` depending on
-the type of command, and call ``object.run_command('command_name')``.
-In addition, you can pass a dictionary to ``command_name``, whose keys are the
-names of parameters::
+Use a reference to a ``View`` or a ``Window``, or ``sublime`` depending on the
+type of command, and call ``object.run_command('command_name')``. In addition,
+commands accept a dictionary whose keys are the names of valid parameters for
+them::
 
    window.run_command("echo", {"Tempus": "Irreparabile", "Fugit": "."})
 
@@ -89,15 +89,14 @@ such as ``on_modified()`` and ``on_selection_modified()`` are called when the
 edit is finished.
 
 It's important to call ``view.end_edit()`` after each ``view.begin_edit()``,
-otherwise the buffer will be left in an inconsistent state. Automatically, an
-attempt will be made to fix it when the edit object gets collected, but often that
-doesn't happen when you expect, and will result in a warning printed to the
-console. In other words, you always should bracket an edit in a
-``try..finally`` block.
+otherwise the buffer will be left in an inconsistent state. An attempt will be
+made to fix errors when the edit object gets collected, but often that doesn't
+happen when you expect, and will result in a warning printed to the console.
+In other words, you should always bracket an edit in a ``try..finally`` block.
 
 The command name passed to ``begin_edit()`` is used for repeat, macro
 recording, and for describing the action when undoing/redoing it. If you're
-making an edit outside of a ``TextCommand``, almost never should you supply a
+making an edit outside of a ``TextCommand``, you should almost never supply a
 command name.
 
 If you have created an edit object, and call a function that creates another
@@ -105,7 +104,7 @@ one, that's fine: the edit is considered finished only when the outermost call
 to ``end_edit()`` runs.
 
 As well as for grouping modifications, you can use edit objects for grouping
-changes to the selection, so that they're undone in a single step.
+changes to the selection so that they're undone in a single step.
 
 
 Responding to Events
@@ -127,18 +126,19 @@ command.
 Python and the Standard Library
 *******************************
 
-Sublime Text ships with a trimmed down standard library. Missing notably are
-the *Tkinter*, *multiprocessing* and *sqlite3* modules.
+Sublime Text ships with a trimmed down standard library. The *Tkinter*,
+*multiprocessing* and *sqlite3* modules are among the missing ones.
 
 
 Automatic Plugin Reload
 ***********************
 
-Sublime Text automatically will reload top-level Python modules from packages
-as they change (perhaps because you are editing a *.py* file). Note that
-Python subpackages won't be reloaded, and this can lead to confusion while you're
-developing plugins. Generally, it's best to restart Sublime Text after you've
-made changes to plugin files, so all changes can take effect.
+Sublime Text will reload top-level Python modules from packages as they change
+(perhaps because you are editing a *.py* file). By contrast, Python
+subpackages won't be reloaded automatically, and this can lead to confusion
+while you're developing plugins. Generally speaking, it's best to restart
+Sublime Text after you've made changes to plugin files, so all changes can
+take effect.
 
 
 Multithreading

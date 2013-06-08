@@ -9,13 +9,13 @@ Syntax Definitions
 Compatibility with Textmate
 ***************************
 
-Sublime Text syntax definitions generally are compatible with Textmate language
-files.
+Generally, Sublime Text syntax definitions are compatible with Textmate
+language files.
 
 File Format
 ***********
 
-Textmate syntax definitions are files in Plist format with the ``tmLanguage`` extension.
+Textmate syntax definitions are Plist files with the ``tmLanguage`` extension.
 However, for convenience in this reference document, JSON is shown instead.
 
 .. code-block:: js

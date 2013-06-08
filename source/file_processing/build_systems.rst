@@ -40,10 +40,10 @@ Here's an example of a build system:
 
 ``selector``
     If the **Tools | Build System | Automatic** option is set, Sublime Text
-    will find the corresponding build system for the active file
-    by automatically matching ``selector`` to the file's scope.
+    will automatically find the corresponding build system for the active file
+    by matching ``selector`` to the file's scope.
 
-In addition to options, also you can use some variables in build systems, as
+In addition to options, you can use some variables in build systems too, as
 we have done above with ``$file``, which expands to the active buffer's
 filename.
 

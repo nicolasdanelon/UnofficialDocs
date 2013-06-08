@@ -10,10 +10,9 @@ As you type into the input area, names of open files and files in open
 folders will be searched, and a preview of the best match will be shown.
 This preview is *transient*; that is, it won't become the actual active buffer
 until you perform some operation on it. Transient views go away when you press
-:kbd:`Esc`. You will see transient views in other situations; they are something
-like ghosts.
+:kbd:`Esc`. You will see transient views in other situations too.
 
-Goto Anything lives up to its name--there's more to it than locating files:
+Goto Anything lives up to its name---there's more to it than locating files:
 
 To perform a **fuzzy search**, append ``#`` and then keep typing, like this:
 
@@ -23,12 +22,12 @@ To perform a **fuzzy search**, append ``#`` and then keep typing, like this:
 
 This instructs Sublime Text to perform a fuzzy search for *treasure* in the
 file whose name matches *island*. Pressing :kbd:`Ctrl+;` will open Goto
-Anything and type the ``#`` for you.
+Anything and insert ``#`` for you.
 
-And, there's more:
+But there's more:
 
 To **search symbols** in the active buffer, press :kbd:`Ctrl+R`. The operator
-``@`` can be used too, as explained above.
+``@`` can be used as explained above too.
 
 To **go to a line number**, press :kbd:`Ctrl+G`. The operator ``:`` can be
 used as explained above too.
@@ -44,26 +43,25 @@ the sidebar will be available in Goto Anything, and for project-wide actions.
 Projects and the sidebar are closely related. There's always an open project,
 whether or not it's explicit.
 
-To **open or close** (toggle) the sidebar, press :kbd:`Ctrl+K, Ctrl+B`.
+To **toggle** the sidebar, press :kbd:`Ctrl+K, Ctrl+B`.
 
 The sidebar can be navigated with the arrow keys, but first you need to give
 it the **input focus** by pressing :kbd:`Ctrl+0`. To return input focus to the
-buffer, press :kbd:`Esc`. Alternatively, you can use the mouse for the same
+buffer, press :kbd:`Esc`. Alternatively, you can use the mouse to the same
 effect, but why would you?
 
-The sidebar, through context menus, also provides basic file management
-operations.
+The sidebar provides basic file management operations through the context menu.
 
 Projects
 ========
 
-Projects group together (into a unit) sets of files and folders you need to work on.
-Once you've set up your project by adding folders in a way that suits you, save
-it and give it a name.
+Essentially, projects group together sets of files and folders. Once you've
+set up a project by adding folders in a way that suits you, save it and
+give it a name.
 
 To save a project, go to **Project | Save Project As...**.
 
-To switch among projects quickly, press :kbd:`Ctrl+Alt+P`.
+To switch projects quickly, press :kbd:`Ctrl+Alt+P`.
 
 Project data are stored in JSON files with a `.sublime-project` extension.
 Wherever there's a `.sublime-project` file, you'll find an ancillary
