@@ -66,19 +66,72 @@ into the *Applications* folder.
 Linux
 =====
 
-You can download the package and uncompress it manually. Alternatively, you
-can use the command line:
+You can download the package and uncompress it manually. Alternatively, you can use the command line:
+
+For i386
+::
+	cd ~
+	wget http://c758482.r82.cf2.rackcdn.com/Sublime\ Text\ 2.0.1.tar.bz2
+	tar vxjf Sublime\ Text\ 2.0.1.tar.bz2
+
+For x64
+::
+	cd ~
+	wget http://c758482.r82.cf2.rackcdn.com/Sublime Text 2.0.1 x64.tar.bz2
+	tar vxjf Sublime\ Text\ 2.0.1\ x64.tar.bz2
+
+
+The above gets you the sublime text package, and untars it for us.
+Now we should move it to a approraite location.
 
 ::
+	sudo mv Sublime\ Text\ 2 /opt/
 
-	cd /path/to/your/apps
-	wget http://url/to/sublime.tar.bz2
-	tar vxjf sublime.tar.bz2
+Much better!
 
-If you want, you can also create a symbolic link to the executable for
-convenience::
+From here, we crate a `l`i`n`k to sublime for the termal to use.
 
-	sudo ln -s /path/to/sublime_text /usr/bin/subl
+::
+	sudo ln -s /opt/Sublime\ Text\ 2/sublime_text /usr/bin/sublime
+
+Cool thing is, now to run sublime text, you can go to a terminal and type sublime.
+
+So you might not want to do all of your lunching from the terminal, so how about adding sublime text to the Unity luncher?
+
+First we are going to have to make a file ...
+
+::
+	sudo sublime /usr/share/applications/sublime.desktop
+
+
+And copy the following in to it's contents.
+
+::
+	[Desktop Entry]
+	Version=2.0.1
+	Name=Sublime Text 2
+	# Only KDE 4 seems to use GenericName, so we reuse the KDE strings.
+	# From Ubuntu's language-pack-kde-XX-base packages, version 9.04-20090413.
+	GenericName=Text Editor
+
+	Exec=sublime
+	Terminal=false
+	Icon=/opt/Sublime Text 2/Icon/48x48/sublime_text.png
+	Type=Application
+	Categories=TextEditor;IDE;Development
+	X-Ayatana-Desktop-Shortcuts=NewWindow
+
+	[NewWindow Shortcut Group]
+	Name=New Window
+	Exec=sublime -n
+	TargetEnvironment=Unity
+
+The last thing you might want to do is replace gEdit with sublime text, I know I do. We can do that simply by replacing all occurrences of gedit.desktop with sublime.desktop in the following file.
+
+::
+	sudo sublime /usr/share/applications/defaults.list
+
+Once you're done with the find and replace, you're done! Save and start hacking away at your next project.
 
 Living Dangerously... or Not
 ============================
