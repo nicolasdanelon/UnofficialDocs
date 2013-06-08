@@ -88,7 +88,7 @@ Now we should move it to a approraite location.
 
 Much better!
 
-From here, we crate a `l`i`n`k to sublime for the termal to use.
+From here, we crate a `link` to sublime for the termal to use.
 ::
 	sudo ln -s /opt/Sublime\ Text\ 2/sublime_text /usr/bin/sublime
 
@@ -122,11 +122,11 @@ And copy the following in to it's contents.
 	Exec=sublime -n
 	TargetEnvironment=Unity
 
-The last thing you might want to do is replace gEdit with sublime text, I know I do. We can do that simply by replacing all occurrences of gedit.desktop with sublime.desktop in the following file.
+The last thing you might want to do is replace gEdit with sublime text, I know I do. We can do that simply by replacing all occurrences of `gedit.desktop` with `sublime.desktop` in the following file.
 ::
 	sudo sublime /usr/share/applications/defaults.list
 
-Once you're done with the find and replace, you're done! Save and start hacking away at your next project.
+Once you're done with that find and replace, you're done! Save and start hacking away at your next project.
 
 Living Dangerously... or Not
 ============================
