@@ -21,7 +21,7 @@ versions of Windows can run 32-bit software.
 On **Linux** run this command in your terminal to check your operating
 system's type::
 
-	uname -m
+    uname -m
 
 For **OS X**, you can ignore this section: there is only one version of
 Sublime Text for OS X.
@@ -66,73 +66,82 @@ into the *Applications* folder.
 Linux
 =====
 
-You can download the package and uncompress it manually. Alternatively, you can use the command line:
+You can download the package and uncompress it manually. Alternatively, you
+can use the command line.
 
-For i386
+**For i386**
+
 ::
-	cd ~
-	wget http://c758482.r82.cf2.rackcdn.com/Sublime\ Text\ 2.0.1.tar.bz2
-	tar vxjf Sublime\ Text\ 2.0.1.tar.bz2
 
-For x64
+    cd ~
+    wget http://c758482.r82.cf2.rackcdn.com/Sublime\ Text\ 2.0.1.tar.bz2
+    tar vxjf Sublime\ Text\ 2.0.1.tar.bz2
+
+**For x64**
+
 ::
-	cd ~
-	wget http://c758482.r82.cf2.rackcdn.com/Sublime Text 2.0.1 x64.tar.bz2
-	tar vxjf Sublime\ Text\ 2.0.1\ x64.tar.bz2
+
+    cd ~
+    wget http://c758482.r82.cf2.rackcdn.com/Sublime Text 2.0.1 x64.tar.bz2
+    tar vxjf Sublime\ Text\ 2.0.1\ x64.tar.bz2
 
 
-The above gets you the sublime text package, and untars it for us.
-Now we should move it to a approraite location.
+Now we should move the uncompressed files to an appropriate location.
+
 ::
-	sudo mv Sublime\ Text\ 2 /opt/
 
-Much better!
+    sudo mv Sublime\ Text\ 2 /opt/
 
-From here, we crate a `link` to sublime for the termal to use.
+
+Lastly, we create a `symbolic link` to use at the command line.
+
 ::
-	sudo ln -s /opt/Sublime\ Text\ 2/sublime_text /usr/bin/sublime
 
-Cool thing is, now to run sublime text, you can go to a terminal and type sublime.
+    sudo ln -s /opt/Sublime\ Text\ 2/sublime_text /usr/bin/sublime
 
-So you might not want to do all of your lunching from the terminal, so how about adding sublime text to the Unity luncher?
 
-First we are going to have to make a file ...
+In Ubuntu, if you also want to add Sublime Text to the Unity luncher, read on.
+
+First we need to create a new file.
+
 ::
-	sudo sublime /usr/share/applications/sublime.desktop
+
+    sudo sublime /usr/share/applications/sublime.desktop
 
 
-And copy the following in to it's contents.
+Then copy the following into it.
+
 ::
-	[Desktop Entry]
-	Version=2.0.1
-	Name=Sublime Text 2
-	# Only KDE 4 seems to use GenericName, so we reuse the KDE strings.
-	# From Ubuntu's language-pack-kde-XX-base packages, version 9.04-20090413.
-	GenericName=Text Editor
 
-	Exec=sublime
-	Terminal=false
-	Icon=/opt/Sublime Text 2/Icon/48x48/sublime_text.png
-	Type=Application
-	Categories=TextEditor;IDE;Development
-	X-Ayatana-Desktop-Shortcuts=NewWindow
+    [Desktop Entry]
+    Version=2.0.1
+    Name=Sublime Text 2
+    # Only KDE 4 seems to use GenericName, so we reuse the KDE strings.
+    # From Ubuntu's language-pack-kde-XX-base packages, version 9.04-20090413.
+    GenericName=Text Editor
 
-	[NewWindow Shortcut Group]
-	Name=New Window
-	Exec=sublime -n
-	TargetEnvironment=Unity
+    Exec=sublime
+    Terminal=false
+    Icon=/opt/Sublime Text 2/Icon/48x48/sublime_text.png
+    Type=Application
+    Categories=TextEditor;IDE;Development
+    X-Ayatana-Desktop-Shortcuts=NewWindow
 
-The last thing you might want to do is replace gEdit with sublime text, I know I do. We can do that simply by replacing all occurrences of `gedit.desktop` with `sublime.desktop` in the following file.
+    [NewWindow Shortcut Group]
+    Name=New Window
+    Exec=sublime -n
+    TargetEnvironment=Unity
+
+If you've registered your copy of Sublime Text, but every time you open it
+you're asked to enter your license, you should try running this command.
+
 ::
-	sudo sublime /usr/share/applications/defaults.list
 
-Once you're done with that find and replace, you're done! Save and start hacking away at your next project.
+    sudo chown -R username:username /home/username/.config /sublime-text-2
 
-If you try to register your copy of Sublime Text, but every time you close and reopen it forget's that you registered it, you should try running this command.
-::
-	sudo chown -R username:username /home/username/.config/sublime-text-2
-
-Just replace `username` with your account's username. This should fix the permission error in the case that you opened up SublimeText the first time as root and allow you to register your copy.
+Just replace `username` with your account's username. This should fix the
+permission error in the case that you opened up Sublime Text as root when you
+first entered the license.
 
 
 Living Dangerously... or Not
@@ -164,5 +173,5 @@ features in a mostly unbroken fashion.
 
 Lastly, **nightly builds** are the bleeding edge, with frequent updates and
 also frequent problems of various degrees of severity. They are fun to try
-out, but do so at your own risk. Nighlty builds are **only available for
+out, but do so at your own risk. Nightly builds are **only available for
 registered users**.
