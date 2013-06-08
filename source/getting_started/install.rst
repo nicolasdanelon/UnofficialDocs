@@ -83,14 +83,12 @@ For x64
 
 The above gets you the sublime text package, and untars it for us.
 Now we should move it to a approraite location.
-
 ::
 	sudo mv Sublime\ Text\ 2 /opt/
 
 Much better!
 
 From here, we crate a `l`i`n`k to sublime for the termal to use.
-
 ::
 	sudo ln -s /opt/Sublime\ Text\ 2/sublime_text /usr/bin/sublime
 
@@ -99,13 +97,11 @@ Cool thing is, now to run sublime text, you can go to a terminal and type sublim
 So you might not want to do all of your lunching from the terminal, so how about adding sublime text to the Unity luncher?
 
 First we are going to have to make a file ...
-
 ::
 	sudo sublime /usr/share/applications/sublime.desktop
 
 
 And copy the following in to it's contents.
-
 ::
 	[Desktop Entry]
 	Version=2.0.1
@@ -127,7 +123,6 @@ And copy the following in to it's contents.
 	TargetEnvironment=Unity
 
 The last thing you might want to do is replace gEdit with sublime text, I know I do. We can do that simply by replacing all occurrences of gedit.desktop with sublime.desktop in the following file.
-
 ::
 	sudo sublime /usr/share/applications/defaults.list
 
