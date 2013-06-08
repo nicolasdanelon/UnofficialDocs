@@ -128,6 +128,13 @@ The last thing you might want to do is replace gEdit with sublime text, I know I
 
 Once you're done with that find and replace, you're done! Save and start hacking away at your next project.
 
+If you try to register your copy of Sublime Text, but every time you close and reopen it forget's that you registered it, you should try running this command.
+::
+	sudo chown -R username:username /home/username/.config/sublime-text-2
+
+Just replace `username` with your account's username. This should fix the permission error in the case that you opened up SublimeText the first time as root and allow you to register your copy.
+
+
 Living Dangerously... or Not
 ============================
 
