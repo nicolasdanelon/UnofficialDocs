@@ -82,7 +82,7 @@ can use the command line.
 ::
 
     cd ~
-    wget http://c758482.r82.cf2.rackcdn.com/Sublime Text 2.0.1 x64.tar.bz2
+    wget http://c758482.r82.cf2.rackcdn.com/Sublime\ Text\ 2.0.1\ x64.tar.bz2
     tar vxjf Sublime\ Text\ 2.0.1\ x64.tar.bz2
 
 
