@@ -120,7 +120,7 @@ Then copy the following into it.
     # From Ubuntu's language-pack-kde-XX-base packages, version 9.04-20090413.
     GenericName=Text Editor
 
-    Exec=sublime
+    Exec=sublime %U
     Terminal=false
     Icon=/opt/Sublime Text 2/Icon/48x48/sublime_text.png
     Type=Application
